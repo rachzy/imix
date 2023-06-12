@@ -1,0 +1,36 @@
+@import url(//db.onlinewebfonts.com/c/b2f90b602a9f5c2da56ad4ff3074c9ca?family=Intro);
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #31ABEF;
+
+    overflow-x: hidden;
+}
+
+h2 {
+    font-family: "Intro", sans-serif;
+    font-weight: bold;
+}
+
+footer {
+    display: flex;
+
+    justify-content: center;
+
+    width: 100vw;
+    height: 10vh;
+
+    margin-top: 10vh;
+    background-image: url("/icones/rodape.png");
+}
+
+footer img.logo {
+    margin: auto;
+    margin-top: -2vh;
+}
