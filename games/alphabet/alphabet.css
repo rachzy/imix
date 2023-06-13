@@ -1,0 +1,35 @@
+div.nuvens-container {
+    display: flex;
+
+    width: 100vw;
+    height: 20vh;
+
+    position: absolute;
+}
+
+div.nuvens-container img {
+    position: absolute;
+}
+
+img.nuvem {
+    width: 60vh;
+    z-index: -9;
+}
+
+img.nuvem.a {
+    left: -5vh;
+}
+
+img.nuvem.b {
+    top: 5vh;
+    right: 0;
+}
+
+div.titulo {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+}
