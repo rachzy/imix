@@ -1,0 +1,169 @@
+div.nuvens-container {
+  display: flex;
+
+  width: 100vw;
+  height: 20vh;
+
+  position: absolute;
+}
+
+div.nuvens-container img {
+  position: absolute;
+}
+
+img.nuvem {
+  width: 60vh;
+  z-index: -9;
+}
+
+img.nuvem.a {
+  left: -5vh;
+}
+
+img.nuvem.b {
+  top: 5vh;
+  right: 0;
+}
+
+div.titulo {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+}
+
+div.titulo img {
+  max-width: 90%;
+}
+
+div.numbers-box {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  width: 60vw;
+  min-height: 70vh;
+  margin: auto;
+
+  background-color: #ebe8e2;
+  border: 0.5vh black solid;
+}
+
+div.numbers-box div.header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding-left: 2vh;
+
+  width: 100%;
+  height: 10vh;
+
+  border-bottom: 0.5vh black solid;
+  background-color: #fe2d2d;
+}
+
+div.numbers-box div.header button {
+  border: 1px solid black;
+  color: black;
+
+  background: none;
+  outline: none;
+
+  cursor: pointer;
+
+  width: 10vh;
+  height: 10vh;
+
+  font-size: 4vh;
+}
+
+div.numbers-box div.header p {
+  font-size: 3vh;
+}
+
+div.numbers-box div.content {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  height: 50vh;
+  flex: 1;
+}
+
+div.numbers-box div.fake-input {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1vh 3vh;
+
+  width: 90%;
+  border-radius: 10vh;
+
+  margin: auto;
+  margin-top: 2vh;
+
+  font-size: 4vh;
+
+  background-color: white;
+}
+
+div.numbers-box div.fake-input h3 {
+  font-family: "Inter", sans-serif;
+  font-weight: 100;
+}
+
+div.numbers-box div#ligacoes {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-evenly;
+  align-items: center;
+
+  width: 70%;
+  flex: 3;
+}
+
+div.numbers-box div#ligacao {
+  display: flex;
+
+  justify-content: space-between;
+
+  width: 100%;
+}
+
+div.numbers-box div#ligacao p {
+  font-family: "Adigiana-Toybox-Regular";
+  font-size: 5vh;
+  font-weight: bold;
+}
+
+div.numbers-box div#ligacao #p1 {
+  display: flex;
+  flex: 4;
+}
+
+div.numbers-box div#ligacao #p1 p {
+  font-size: 8vh;
+}
+
+div.numbers-box div#ligacao #p2 {
+  display: flex;
+  flex: 1;
+
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  div.numbers-box {
+    width: 95%;
+  }
+}

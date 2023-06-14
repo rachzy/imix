@@ -1,41 +1,59 @@
 @import url(//db.onlinewebfonts.com/c/b2f90b602a9f5c2da56ad4ff3074c9ca?family=Intro);
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
+
+@font-face {
+  font-family: "Adigiana-Toybox-Regular";
+  src: url("https://webfonts.ffonts.net/webfonts/A/D/Adigiana-Toybox-Regular/Adigiana-Toybox-Regular.ttf.woff")
+      format("woff"),
+    url("https://webfonts.ffonts.net/webfonts/A/D/Adigiana-Toybox-Regular/Adigiana-Toybox-Regular.ttf.svg#Adigiana-Toybox-Regular")
+      format("svg"),
+    url("https://webfonts.ffonts.net/webfonts/A/D/Adigiana-Toybox-Regular/Adigiana-Toybox-Regular.ttf.eot"),
+    url("https://webfonts.ffonts.net/webfonts/A/D/Adigiana-Toybox-Regular/Adigiana-Toybox-Regular.ttf.eot?#iefix")
+      format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #31ABEF;
+  background-color: #31abef;
 
-    overflow-x: hidden;
+  overflow-x: hidden;
+}
+
+p {
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
 }
 
 a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 h2 {
-    font-family: "Intro", sans-serif;
-    font-weight: bold;
+  font-family: "Intro", sans-serif;
+  font-weight: bold;
 }
 
 footer {
-    display: flex;
+  display: flex;
 
-    justify-content: center;
+  justify-content: center;
 
-    width: 100vw;
-    height: 10vh;
+  width: 100vw;
+  height: 10vh;
 
-    margin-top: 10vh;
-    background-image: url("/icones/rodape.png");
+  margin-top: 10vh;
+  background-image: url("/icones/rodape.png");
 }
 
 footer img.logo {
-    margin: auto;
-    margin-top: -2vh;
+  margin: auto;
+  margin-top: -2vh;
 }
