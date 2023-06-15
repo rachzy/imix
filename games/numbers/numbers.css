@@ -144,6 +144,9 @@ div.numbers-box div#ligacao p {
   font-family: "Adigiana-Toybox-Regular", sans-serif;
   font-size: 5vh;
   font-weight: bold;
+
+  color: black;
+  cursor: pointer;
 }
 
 div.numbers-box div#ligacao #p1 {
