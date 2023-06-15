@@ -97,6 +97,49 @@ div.numbers-box div.content {
   flex: 1;
 }
 
+div.numbers-box div.content div.buttons {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+
+  width: 80%;
+}
+
+div.numbers-box div.content button {
+  border: none;
+  border-radius: 2vh;
+
+  color: white;
+  text-transform: uppercase;
+
+  font-family: "Inter", sans-serif;
+  font-size: 3vh;
+  font-weight: bold;
+  letter-spacing: 0.5vh;
+
+  padding: 2vh;
+  outline: none;
+
+  flex: 1;
+  margin: 2vh;
+
+  cursor: pointer;
+  transition: 0.2s all;
+}
+
+div.numbers-box div.content button:hover {
+  transform: scale(1.05);
+}
+
+div.numbers-box div.content button.btn-conferir {
+  background-color: red;
+}
+
+div.numbers-box div.content button.btn-tentar-novamente {
+  background-color: chartreuse;
+}
+
 div.numbers-box div.fake-input {
   display: flex;
 
@@ -168,5 +211,9 @@ div.numbers-box div#ligacao #p2 {
 @media screen and (max-width: 768px) {
   div.numbers-box {
     width: 95%;
+  }
+
+  div.numbers-box div.content div.buttons {
+    width: 100%;
   }
 }
