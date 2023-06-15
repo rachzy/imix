@@ -3,13 +3,7 @@
 
 @font-face {
   font-family: "Adigiana-Toybox-Regular";
-  src: url("https://webfonts.ffonts.net/webfonts/A/D/Adigiana-Toybox-Regular/Adigiana-Toybox-Regular.ttf.woff")
-      format("woff"),
-    url("https://webfonts.ffonts.net/webfonts/A/D/Adigiana-Toybox-Regular/Adigiana-Toybox-Regular.ttf.svg#Adigiana-Toybox-Regular")
-      format("svg"),
-    url("https://webfonts.ffonts.net/webfonts/A/D/Adigiana-Toybox-Regular/Adigiana-Toybox-Regular.ttf.eot"),
-    url("https://webfonts.ffonts.net/webfonts/A/D/Adigiana-Toybox-Regular/Adigiana-Toybox-Regular.ttf.eot?#iefix")
-      format("embedded-opentype");
+  src: url("./fontes/AdigianaUI.ttf");
   font-weight: normal;
   font-style: normal;
 }
