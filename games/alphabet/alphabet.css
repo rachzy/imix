@@ -1,35 +1,240 @@
 div.nuvens-container {
-    display: flex;
+  display: flex;
 
-    width: 100vw;
-    height: 20vh;
+  width: 100vw;
+  height: 20vh;
 
-    position: absolute;
+  position: absolute;
 }
 
 div.nuvens-container img {
-    position: absolute;
+  position: absolute;
 }
 
 img.nuvem {
-    width: 60vh;
-    z-index: -9;
+  width: 60vh;
+  z-index: -9;
 }
 
 img.nuvem.a {
-    left: -5vh;
+  left: -5vh;
 }
 
 img.nuvem.b {
-    top: 5vh;
-    right: 0;
+  top: 5vh;
+  right: 0;
 }
 
 div.titulo {
-    display: flex;
+  display: flex;
 
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  margin: auto;
+}
+
+div.titulo img {
+  max-width: 100%;
+}
+
+div.balao {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  height: 10vh;
+  background-color: white;
+  border-radius: 5vh;
+
+  margin-block: 5vh;
+  margin-left: 20vh;
+
+  padding: 3vh;
+
+  width: fit-content;
+}
+
+div.balao h2 {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: fit-content;
+}
+
+div.balao:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 4vh solid #fff;
+  border-right: 3vh solid transparent;
+  border-top: 2vh solid #fff;
+  border-bottom: 4vh solid transparent;
+  left: 25vh;
+  margin-top: 11vh;
+
+  z-index: -9;
+}
+
+div.balao img {
+  width: 7vh;
+  margin-inline: 3vh;
+
+  cursor: pointer;
+  transition: 0.2s all;
+}
+
+div.balao img:hover {
+  transform: scale(1.1);
+}
+
+div.game-wrapper {
+  display: flex;
+
+  justify-content: flex-start;
+
+  width: 90%;
+  margin: auto;
+}
+
+div.game-box {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: start;
+
+  width: 60vw;
+  min-height: 70vh;
+  margin: auto;
+
+  background-color: #ebe8e2;
+  border: 0.5vh black solid;
+}
+
+div.game-box div.header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding-left: 2vh;
+
+  width: 100%;
+  height: 5vh;
+
+  border-bottom: 0.5vh black solid;
+  background-color: #fef02d;
+}
+
+div.game-box div.header button {
+  border: 1px solid black;
+  color: black;
+
+  background: none;
+  outline: none;
+
+  cursor: pointer;
+
+  width: 5vh;
+  height: 5vh;
+
+  font-size: 4vh;
+}
+
+div.game-box div.header p {
+  font-size: 3vh;
+}
+
+div.game-box div.content {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  height: 50vh;
+  flex: 1;
+}
+
+div.game-box div.fake-input-container {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 15vh;
+
+  border-bottom: 0.5vh solid black;
+}
+
+div.game-box div.fake-input {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1vh 3vh;
+
+  width: 90%;
+  border-radius: 10vh;
+
+  font-size: 4vh;
+
+  background-color: white;
+}
+
+div.game-box div.fake-input h3 {
+  font-family: "Inter", sans-serif;
+  font-weight: 100;
+}
+
+div.game-box div.letras {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 6vh;
+
+  width: 100%;
+  height: 50vh;
+
+  overflow-y: scroll;
+
+  padding: 2vh;
+}
+
+div.game-box div.letras p {
+  font-family: "Adigiana-Toybox-Regular", sans-serif;
+  font-size: 7vh;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: 0.2s all;
+}
+
+div.game-box div.letras p:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
+  div.game-wrapper {
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+  }
 
-    width: 100vw;
+  div.balao {
+    margin: 0;
+    margin-block: 3vh;
+  }
+
+  div.game-box {
+    width: 95vw;
+  }
 }
