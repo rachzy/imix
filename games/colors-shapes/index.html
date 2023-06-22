@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./../../main.css" />
+    <link rel="stylesheet" href="./colors-shapes.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -11,9 +13,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./../../main.css" />
-    <link rel="stylesheet" href="./numbers.css" />
-    <title>i-mix: Numbers</title>
+    <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
+    <title>i-mix: Colors & Shapes</title>
   </head>
   <body>
     <div class="nuvens-container">
@@ -21,11 +22,15 @@
       <img src="/icones/nuvem.png" class="nuvem b" />
     </div>
     <div class="titulo">
-      <img src="/icones/letreiro-numbers.png" alt="numbers" />
+      <img
+        src="/icones/letreiro-colors-and-shapes.png"
+        alt="colors and shapes"
+      />
     </div>
-    <div class="numbers-box">
+
+    <div class="main-box">
       <div class="header">
-        <p>Numeros</p>
+        <p>Formas & cores</p>
         <div class="buttons">
           <button>
             <i class="fa-solid fa-window-minimize"></i>
@@ -40,21 +45,32 @@
       </div>
       <div class="content">
         <div class="fake-input">
-          <h3>Conecte</h3>
+          <h3>Selecione: <b>Exemplo</b></h3>
           <i class="fa-solid fa-magnifying-glass"></i>
         </div>
-        <div id="ligacoes"></div>
-        <div class="buttons">
-          <button class="btn-conferir">Conferir</button>
-          <button class="btn-tentar-novamente" style="display: none">
-            Tentar Novamente
-          </button>
+        <div class="formas">
+          <img
+            id="forma"
+            alt="red-circle"
+            src="../../icones/circulo-verde.png"
+          />
+          <img
+            id="forma"
+            alt="pink-rectangle"
+            src="../../icones/retangulo-rosa.png"
+          />
+          <img
+            id="forma"
+            alt="red-square"
+            src="../../icones/quadrado-vermelho.png"
+          />
+          <img
+            id="forma"
+            alt="yellow-triangle"
+            src="../../icones/triangulo-amarelo.png"
+          />
         </div>
       </div>
     </div>
-    <script src="./numbers.js"></script>
   </body>
-  <footer>
-    <img class="logo" src="../../icones/mdb.png" />
-  </footer>
 </html>
