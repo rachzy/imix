@@ -137,3 +137,48 @@ div.main-box div.formas img {
 div.main-box div.formas img:hover {
   transform: scale(1.05);
 }
+
+div.resposta-container {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  height: 70vh;
+  display: none;
+}
+
+div.resposta-container h2 {
+  font-size: 5vh;
+}
+
+div.resposta-container#acerto h2 {
+  color: chartreuse;
+}
+
+div.resposta-container#erro h2 {
+  color: red;
+}
+
+div.resposta-container button {
+  margin: 2vh;
+  padding: 2vh;
+
+  background-color: rgb(255, 123, 0);
+  color: white;
+
+  border: none;
+  border-radius: 2vh;
+  outline: none;
+  cursor: pointer;
+
+  font-size: 2.5vh;
+  font-weight: bold;
+
+  transition: 0.2s all;
+}
+
+div.resposta-container button:hover {
+  transform: scale(1.1);
+}

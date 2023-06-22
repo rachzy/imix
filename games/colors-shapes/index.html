@@ -45,13 +45,13 @@
       </div>
       <div class="content">
         <div class="fake-input">
-          <h3>Selecione: <b>Exemplo</b></h3>
+          <h3>Selecione: <b id="forma-alvo"></b></h3>
           <i class="fa-solid fa-magnifying-glass"></i>
         </div>
         <div class="formas">
           <img
             id="forma"
-            alt="red-circle"
+            alt="green-circle"
             src="../../icones/circulo-verde.png"
           />
           <img
@@ -70,7 +70,18 @@
             src="../../icones/triangulo-amarelo.png"
           />
         </div>
+        <div class="resposta-container" id="erro">
+          <h2>Respota errada!</h2>
+          <button class="tentar-novamente">Tentar Novamente</button>
+        </div>
+        <div class="resposta-container" id="acerto">
+          <h2>Resposta correta!</h2>
+          <button class="tentar-novamente">Tentar Novamente</button>
+        </div>
       </div>
     </div>
+
+    <script src="../../scripts/shuffleArray.js"></script>
+    <script src="./colors-shapes.js"></script>
   </body>
 </html>
