@@ -1,129 +1,130 @@
-
 div.nuvens-container {
-    display: flex;
+  display: flex;
 
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
 
-    position: absolute;
+  position: absolute;
 }
 
 div.nuvens-container img {
-    position: absolute;
+  position: absolute;
 }
 
 img.nuvem {
-    width: 60vh;
-    z-index: -9;
+  width: 60vh;
+  z-index: -9;
 }
 
 img.nuvem.a {
-    left: -5vh;
+  left: -5vh;
 }
 
 img.nuvem.b {
-    top: 24vh;
-    right: 0;
+  top: 24vh;
+  right: 0;
 }
 
 img.nuvem.c {
-    top: 60vh;
-    left: 20vw;
+  top: 60vh;
+  left: 20vw;
 
-    z-index: 9;
+  z-index: 9;
 }
 
 img.estrela {
-    width: 20vh;
-    right: 10vw;
-    top: 85vh;
-    transform: rotate(45deg);
+  width: 20vh;
+  right: 10vw;
+  top: 85vh;
+  transform: rotate(45deg);
 }
 
 div.title-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    width: 50vw;
-    height: 100vh;
+  width: 50vw;
+  height: 100vh;
 
-    margin: auto;
+  margin: auto;
 }
 
 div.title-container img {
-    flex: 1;
-    width: 100%;
-    object-fit: contain;
+  flex: 1;
+  width: 100%;
+  object-fit: contain;
 }
 
 img.letreiro {
-    z-index: 99;
-    margin-top: -10vh;
+  z-index: 99;
+  margin-top: -10vh;
 }
 
 div.wish-box {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    justify-content: center;
+  justify-content: center;
 
-    width: 60vw;
-    min-height: 60vh;
-    margin: auto;
+  width: 60vw;
+  min-height: 60vh;
+  margin: auto;
 
-    background-color: #EBE8E2;
-    border: 0.5vh black solid;
+  background-color: #ebe8e2;
+  border: 0.5vh black solid;
 }
 
 div.wish-box div.header {
-    display: flex;
+  display: flex;
 
-    justify-content: center;
+  justify-content: center;
 
-    width: 100%;
-    height: 10vh;
+  width: 100%;
+  height: 10vh;
 
-    border-bottom: 0.5vh black solid;
-    background-color: #FEBB2D;
+  border-bottom: 0.5vh black solid;
+  background-color: #febb2d;
 }
 
 div.wish-box div.header img {
-    object-fit: cover;
-    max-width: 100%;
+  object-fit: cover;
+  max-width: 100%;
 }
 
 div.wish-box div.dados {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 
-    width: 100%;
-    flex: 4;
+  width: 100%;
+  flex: 4;
 }
 
 a.dado {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 
-    cursor: pointer;
-    transition: 0.2s all;
+  cursor: pointer;
+  transition: 0.2s all;
+
+  margin: 2vh;
 }
 
 a.dado:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 a.dado img {
-    width: 15rem;
+  width: 15rem;
 }
 
 @media screen and (max-width: 768px) {
-    div.title-container {
-        width: 100%;
-    }
+  div.title-container {
+    width: 100%;
+  }
 }
