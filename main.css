@@ -44,7 +44,7 @@ footer {
   height: 10vh;
 
   margin-top: 10vh;
-  background-image: url("/icones/rodape.png");
+  background-image: url("./icones/rodape.png");
 }
 
 footer img.logo {
