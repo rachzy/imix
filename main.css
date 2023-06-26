@@ -45,9 +45,19 @@ footer {
 
   margin-top: 10vh;
   background-image: url("./icones/rodape.png");
+  background-repeat: repeat;
 }
 
 footer img.logo {
   margin: auto;
-  margin-top: -2vh;
+  margin-top: -4vh;
+
+  cursor: pointer;
+  transition: 0.2s all;
+
+  width: 50vh;
+}
+
+footer img.logo:hover {
+  transform: scale(1.05);
 }
