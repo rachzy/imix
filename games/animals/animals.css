@@ -98,7 +98,9 @@ div.jogo-container h2 {
   height: 100%;
   position: absolute;
   border-radius: 5px;
-  background: #1c7ccc;
+
+  background: #ffffff;
+  
   backface-visibility: hidden;
 
   object-fit: cover;
@@ -106,4 +108,5 @@ div.jogo-container h2 {
 
 .front-face {
   transform: rotateY(180deg);
+  border: 0.5vh solid #1c7ccc;
 }
