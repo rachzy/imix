@@ -2,11 +2,15 @@ const letrasContainer = document.querySelector(".letras");
 const audioBtn = document.querySelector("#audio-btn");
 const letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const letrasSplit = letras.split("");
+let pontos = 0;
 let letraSelecionada;
 let audio;
 
-letraSelecionada = letrasSplit[Math.floor(Math.random() * letrasSplit.length)];
-audio = new Audio(`../../audios/${letraSelecionada}.mp3`);
+function selecionarAudioAleatorio() {
+  letraSelecionada = letrasSplit[Math.floor(Math.random() * letrasSplit.length)];
+  audio = new Audio(`../../audios/${letraSelecionada}.mp3`);
+}
+selecionarAudioAleatorio();
 
 audioBtn.addEventListener("click", () => {
   audio.play();
@@ -14,11 +18,14 @@ audioBtn.addEventListener("click", () => {
 
 function checarLetra(letra) {
   if (letra === letraSelecionada) {
-    window.alert("Parabéns, você acertou!");
-    window.location.href = "../../index.html";
+    pontos+= 1;
+    window.alert(`Parabéns, você acertou! Você está com ${pontos} ponto(s)!`);
   } else {
-    window.alert("Você errou! Tente de novo!");
+    pontos = Math.max(0, pontos - 1);
+    window.alert(`Você errou e perdeu um ponto! Você está com ${pontos} ponto(s)!`);
   }
+
+  selecionarAudioAleatorio();
 }
 
 letrasSplit.forEach((letra) => {
