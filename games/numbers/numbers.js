@@ -14,14 +14,20 @@ let selecionado = false; // Variável que determina se um usuário está selecio
 let colunaSelecionado = 0; // Variável que determina qual coluna está o elemento selecionado
 let indexSelecionado = 0; // Variável que determina quantos elementos já foram selecionados
 
+// Adiciona a função que reseta os valores atuais e inicia o game novamente no botão de tentar novamente
 btnTentarNovamente.addEventListener("click", () => {
+  // Faz com que o botão de tentar novamente desapareça
   btnTentarNovamente.style.display = "none";
+
+  // Faz com que o botão de conferir apareça
   btnConferir.style.display = "block";
 
+  // Reseta os valores
   selecionado = false;
   colunaSelecionado = 0;
   indexSelecionado = 0;
 
+  // Cria as ligações novamente
   criarLigacoes();
 });
 
@@ -31,23 +37,32 @@ btnConferir.addEventListener("click", () => {
   const opcoes = document.querySelectorAll("#op1");
   const ligacoesRespostas = document.querySelectorAll("#op2");
   const lpArray = [...ligacoesRespostas];
+
+  // Confere se cada uma das opções possui o valor correto
   opcoes.forEach((opcao) => {
     const cor = opcao.style.color;
 
     if (!cor) return;
 
     const valor = opcao.textContent;
+
+    // Procura pela posição da opção correta
     let posicaoOpcao = ligacoes[0].findIndex((op) => op === valor);
+
+    // Seleciona o elemento que corresponderia à opção correta
     let elementoResposta = lpArray.find(
       (lig) => lig.textContent === ligacoes[1][posicaoOpcao]
     );
+    // Armazena a cor do elementoResposta
     const corResposta = elementoResposta.style.color;
 
     if (!corResposta) return;
 
+    // Caso a cor da opção corresponda à cor da resposta, adicione um ponto
     if (cor === corResposta) pontos++;
   });
 
+  // Mostra um diferente alerta pro usuário baseado em sua pontuação final
   if (pontos >= ligacoes[0].length) {
     window.alert(
       `Parabéns, você acertou todas as ligações e conseguiu ${pontos} pontos`
@@ -56,8 +71,8 @@ btnConferir.addEventListener("click", () => {
     window.alert(`Pontuação: ${pontos}. Tente novamente!`);
   }
 
-  btnConferir.style.display = "none";
-  btnTentarNovamente.style.display = "block";
+  btnConferir.style.display = "none"; // Desabilita o botão de conferir
+  btnTentarNovamente.style.display = "block"; // Habilita o botão de tentar novamente
 });
 
 function cliqueLigacao(elemento, coluna) {
@@ -133,16 +148,21 @@ function criarLigacao(el1, el2) {
   divLigacoes.appendChild(divLigacao);
 }
 
+// Função que cria as ligações das opções de forma aleatório
 function criarLigacoes() {
-  divLigacoes.innerHTML = "";
+  divLigacoes.innerHTML = ""; // Reseta o HTML da div de ligações
 
+  // Coluna 1...
   const copiaOpcopes = [...ligacoes[0]];
   const opcoesEmbaralhadas = shuffleArray(copiaOpcopes);
 
+  // Coluna 2...
   const copiaLigacoes = [...ligacoes[1]];
   const ligacoesEmbaralhadas = shuffleArray(copiaLigacoes);
 
+  // Para cada ligação
   ligacoes[0].forEach((elemento, index) => {
+    // Cria uma ligação entre os elementos que possuem a mesma posição na array aleatória
     criarLigacao(opcoesEmbaralhadas[index], ligacoesEmbaralhadas[index]);
   });
 }

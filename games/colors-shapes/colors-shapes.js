@@ -1,3 +1,6 @@
+// Elementos a serem selecionados
+// #: Seleciona por ID
+// .: Seleciona por class
 const formas = document.querySelectorAll("#forma");
 const divFormas = document.querySelector(".formas");
 const formaAlvo = document.querySelector("#forma-alvo");
@@ -5,6 +8,8 @@ const formasContainer = document.querySelector(".formas");
 const erroContainer = document.querySelector("#erro");
 const acertoContainer = document.querySelector("#acerto");
 const tentarNovamenteBtn = document.querySelectorAll(".tentar-novamente");
+
+// Todos os tipos de formas disponíveis
 let tipos = [
   {
     id: "green-circle",
@@ -24,38 +29,56 @@ let tipos = [
   },
 ];
 
+// Função que inicia o game
 function iniciarGame() {
-    formasContainer.style.display = "flex";
-    acertoContainer.style.display = "none";
-    erroContainer.style.display = "none";
+  // Faz com que todos os elementos necessários apareçam (mudando o display deles)
+  formasContainer.style.display = "flex";
+  acertoContainer.style.display = "none";
+  erroContainer.style.display = "none";
 
-    let tipoAleatorio = tipos[Math.floor(Math.random() * tipos.length)];
+  // Seleicona um tipo aleatório
+  let tipoAleatorio = tipos[Math.floor(Math.random() * tipos.length)];
 
-    const tiposRandomizadas = shuffleArray(tipos);
-    
-    formaAlvo.textContent = tipoAleatorio.label;
-    divFormas.innerHTML = "";
-    
-    tiposRandomizadas.forEach((tipo) => {
-      const forma = [...formas].find((forma) => forma.alt === tipo.id);
+  // Randomiza os tipos
+  const tiposRandomizadas = shuffleArray(tipos);
 
-      function cliqueForma() {
-        formasContainer.style.display = "none";
-        if (forma.alt === tipoAleatorio.id) {
-          acertoContainer.style.display = "flex";
-        } else {
-          erroContainer.style.display = "flex";
-        }
+  // Seta o texto que mostra qual forma deverá ser selecionada
+  formaAlvo.textContent = tipoAleatorio.label;
+
+  // Reseta o HTML do contianer de formas
+  divFormas.innerHTML = "";
+
+  // Para cada um dos tipos...
+  tiposRandomizadas.forEach((tipo) => {
+    // Encontra o elemento da forma que corresponde à esse tipo
+    const forma = [...formas].find((forma) => forma.alt === tipo.id);
+
+    // Funçõa que será ativada quando o usuário clicar na forma
+    function cliqueForma() {
+      // Faz com que o container das formas desapareça
+      formasContainer.style.display = "none";
+
+      // Caso o "alt" da forma corresponda ao ID do tipo selecionado, então a forma selecionada
+      // é a forma correta! Logo, faça com que o container de acertos apareça
+      if (forma.alt === tipoAleatorio.id) {
+        acertoContainer.style.display = "flex";
+      } else {
+        // Caso contrário, o usuário selecionou uma forma errada
+        // Portanto, faça com o container de erro apareça
+        erroContainer.style.display = "flex";
       }
-    
-      forma.onclick = cliqueForma;
-    
-      divFormas.appendChild(forma);
-    });
+    }
+
+    // Adiciona a função de clique à forma
+    forma.onclick = cliqueForma;
+
+    // Adiciona a forma criada à div de formas
+    divFormas.appendChild(forma);
+  });
 }
 iniciarGame();
 
+// Função que adiciona a função de iniciar o game novamente à ambos os botões de tentar novamente
 tentarNovamenteBtn.forEach((btn) => {
-    btn.addEventListener("click", iniciarGame)
-})
-
+  btn.addEventListener("click", iniciarGame);
+});
